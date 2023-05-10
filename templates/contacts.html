@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="">
+                <b>DNP34 ®️</b>
+            </div>
+            <nav>
+                <a href="{{ url_for('home') }}">🏠 Главная</a>
+                <a href="{{ url_for('search') }}">🔍 Поиск</a>
+                <a href="{{ url_for('contacts') }}">☎️ Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="block">
+                <div class="text">
+                    <img src="{{ url_for('static', filename='images/avatar-full.png') }}" alt="">
+                    <p>💠 HeadHunter является одним из самых популярных и узнаваемых сервисов поиска работы и персонала в России!</p>
+                    <p>💠 Сервис HeadHunter имеет большую базу данных резюме и вакансий, что позволяет быстро и эффективно находить подходящих кандидатов или вакансии. </p>
+                </div>
+                <a href="https://github.com/dnp34"><button>👁‍🗨 GitHub</button></a>
+            </div>
+            <div class="image">
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+        ©️ Copyright (c) 2023
+    </footer>
+</body>
+</html>

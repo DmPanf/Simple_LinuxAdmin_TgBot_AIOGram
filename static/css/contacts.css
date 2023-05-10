@@ -1,0 +1,55 @@
+body {
+    background-image: url("../images/bg-main.jpg");
+    background-size: cover;
+    background-color: #2525256c;
+    background-blend-mode: darken;
+}
+
+.content {
+    position: relative;
+    min-height: calc(100vh - 80px - 50px - 100px);
+}
+
+.block {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.3em;
+    position: absolute;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    right: 0;
+    bottom: 10% ;
+}
+
+.block .text {
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.block .text img {
+    align-self: flex-start;
+}
+
+.block button {
+    width: 100%;
+}
+
+.image {
+    position: absolute;
+    left: 0;
+    top: 0%;
+    background: #fff;
+    border-radius: 20px;
+    width: 60%;
+    height: 75%;
+    z-index: 9;
+    background-image: url("../images/img-contacts.jpg");
+    background-size: 110%;
+    background-position: center center;
+}

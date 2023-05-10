@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты поиска</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="">
+                <b>DNP34 ®️</b>
+            </div>
+            <nav>
+                <a href="{{ url_for('home') }}">🏠 Главная</a>
+                <a href="{{ url_for('search') }}">🔍 Поиск</a>
+                <a href="{{ url_for('contacts') }}">☎️ Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="block">
+                <div class="text">
+                    <div class="row">
+                        <span>
+                            <img src="{{ url_for('static', filename='images/search.svg') }}" alt="">
+                            {{ results.keywords }}
+                        </span>
+                        <span>
+                            <img src="{{ url_for('static', filename='images/map.svg') }}" alt="">
+                            {{ results.city }} 
+                        </span>
+                    </div><br>
+                    <h2>Результаты поиска:</h2>
+                    <table>
+                        <tr class="center">
+                            <th>🔸 Вакансия </th>
+                            <th>🔸 Количество </th>
+                            <th>🔸 Средняя ЗП (от) </th>
+                            <th>🔸 Средняя ЗП (до) </th>
+                        </tr>
+                        <tr class="center">
+                            <td> {{ results.keywords }}</td>
+                            <td> {{ results.count }}</td>
+                            <td> {{ results.average_from|number_format(0) }} руб.</td>
+                            <td> {{ results.average_to|number_format(0) }} руб.</td>
+                        </tr>
+                    </table><br>
+                    <table>
+                        <tr class="left">
+                            <th>🔸 Основные Требования:</th>
+                        </tr>
+                        <tr class="left">
+                            <td>
+                                {% for requirement in results.requirements %}
+                                    <p>🔹 {{ requirement.name }}: {{ requirement.count }} ({{ requirement.percent }}%)</p>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <h3><a href="{{ url_for('search') }}">🔍 Новый поиск</a></h3>
+                </div>
+            </div>
+            <div class="image">
+                test
+            </div>
+        </div>
+    </main>
+    <footer>
+        ©️ Copyright (c) 2023
+    </footer>
+</body>
+</html>
