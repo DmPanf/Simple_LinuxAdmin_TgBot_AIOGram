@@ -1,0 +1,5 @@
+.*
+.env
+env*
+myconfig.py
+env.json
