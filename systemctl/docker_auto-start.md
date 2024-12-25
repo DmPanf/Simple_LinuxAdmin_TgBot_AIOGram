@@ -7,7 +7,7 @@ First, confirm the container's name or ID:
 docker ps -a
 ```
 
-Look for your container in the list, e.g., `4ocr-20-got-ocr-app`.
+Look for your container in the list, e.g., `myapp`.
 
 ---
 
@@ -27,7 +27,7 @@ Use the `--restart` flag to configure the container's restart behavior. For an e
    docker run -d --restart always --name myapp <image_name>
    ```
 
-   Replace `<image_name>` with the image your container uses (e.g., `4ocr-20-got-ocr-app`).
+   Replace `<image_name>` with the image your container uses (e.g., `myapp`).
 
 ---
 
@@ -46,7 +46,7 @@ Docker provides several restart policy options:
 If you want to update the restart policy of an existing container without recreating it:
 
 ```bash
-docker update --restart always 4ocr-20-got-ocr-app
+docker update --restart always myapp
 ```
 
 ---
