@@ -1,0 +1,14 @@
+[Unit]
+Description=SSH Tunnel Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -R 0.0.0.0:8080:localhost:8084 user@server -N -q
+Restart=always
+RestartSec=5
+User=rtatex
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
