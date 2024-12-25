@@ -3,7 +3,7 @@ Description=SSH Tunnel Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/ssh -R 0.0.0.0:8080:localhost:8084 user@server -N -q
+ExecStart=/usr/bin/ssh -R 0.0.0.0:8080:localhost:8080 user@server -N -q
 Restart=always
 RestartSec=5
 User=rtatex
