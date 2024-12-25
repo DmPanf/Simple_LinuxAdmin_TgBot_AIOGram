@@ -1,4 +1,4 @@
-## 🚀 Reliable Service Setup with systemd
+### 🚀 Reliable Service Setup with systemd
 
 This guide provides a step-by-step process for setting up and debugging a reliable service using `systemd` on Linux. Whether you’re forwarding a port via SSH or running a bot, this tutorial will ensure your service runs consistently and restarts automatically in case of failure.
 
