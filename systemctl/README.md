@@ -50,7 +50,7 @@ Before starting, ensure the following:
    After=network.target
 
    [Service]
-   ExecStart=/usr/bin/ssh -R 0.0.0.0:8084:localhost:8084 bunta@api-serv -N -q
+   ExecStart=/usr/bin/ssh -R 0.0.0.0:8080:localhost:8080 user@server -N -q
    Restart=always
    RestartSec=5
    User=bunta
