@@ -20,8 +20,8 @@ TOKEN = TOKEN_01
 
 bot = telebot.TeleBot(TOKEN)
 
-#TOKEN = '1420657354:AAHXXa3cX_cuZjGzQkuCHKlymoalX10ftIE' # [ZAQ Proba Serv] = vti-monitor
-#user_id = 408372130                         # id main [gtt]
+#TOKEN = '...' # [ZAQ Proba Serv] = vti-monitor
+#user_id = ...                         # id main [gtt]
 
 @bot.message_handler(content_types=["text"])
 def main(message):
