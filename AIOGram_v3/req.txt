@@ -1,0 +1,4 @@
+# pip install -r req.txt
+aiogram
+python-dotenv
+nest_asyncio
