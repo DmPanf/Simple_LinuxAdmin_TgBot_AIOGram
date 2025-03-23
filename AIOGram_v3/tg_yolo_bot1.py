@@ -9,6 +9,11 @@ from aiogram.filters import Command
 from aiogram.client.bot import DefaultBotProperties
 from aiogram.types import FSInputFile
 import logging
+from dotenv import load_dotenv
+
+# Загрузка переменных из .env
+load_dotenv()
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
